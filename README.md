@@ -2,3 +2,6 @@
  
 2 ) Basically, in the AI multiverse setup, you just setup the Google Gemini SDK once. Then in your prompt, you give the AI different personas like "act as a comedian" or "act as a serious coach". After that, you chat with whichever persona you want and the same AI replies in totally different tones based on that role.
 ( app2.py )
+
+3 )  The Multiverse of Chatbots is an interactive Streamlit application powered by Google Gemini 2.5 Flash. Users can choose from multiple fictional characters and personalities, then have engaging conversations while each chatbot responds in character. The app features a cosmic glassmorphic UI, customizable response length, persistent chat history, and secure API key management using environment variables or Streamlit Secrets.
+Working demo of the project : https://drive.google.com/file/d/1X85Aq7mzN1oRRmMw53BWkR1f9JA1wtWm/view?usp=drive_link
