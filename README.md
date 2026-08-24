@@ -9,3 +9,17 @@ Working demo of the project : https://drive.google.com/file/d/1X85Aq7mzN1oRRmMw5
 ASSIGNMENT 4 - 🎨 **AI Image Generator** is a Streamlit-based application that generates images from text prompts using the Pollinations AI image generation service. Users can select art styles, customize image dimensions, enable Magic Enhance for improved prompts, generate surprise images, and download the generated artwork. ( app4.py ) 
  Working demo of the project : https://drive.google.com/file/d/1VHqgvkG-Usxyl6MhcoEf8Rcn-JAjrMoz/view?usp=drive_link
 
+ ASSIGNMENT 5 - WATCH DEMO : https://drive.google.com/file/d/1JJ2KKMH2Yn693IRgCx3AA5QJ0y9M6qT2/view?usp=drive_link
+An interactive AI-powered visual novel built with Streamlit, Gemini, Pollinations, and gTTS.
+
+✨ Features
+🎭 Story Settings – Choose genre and art style.
+🤖 Gemini AI – Generates story content in structured JSON.
+🔀 Dynamic Choices – 2–3 AI-generated actions guide the story.
+🖼️ AI Images – Pollinations generates visuals from AI prompts.
+🔊 Text-to-Speech – gTTS converts narration into audio.
+💾 Session State – Preserves story and chat history during interaction.
+🔄 How It Works
+
+Choose Settings → Generate Story → Display Image & Audio → Select Choice → Continue Story
+
