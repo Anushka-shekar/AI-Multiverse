@@ -1,5 +1,5 @@
 streamlit>=1.38
 pandas>=2.2
-google-generativeai>=0.8
+google-genai>=0.8
 python-dotenv
 pypdf
