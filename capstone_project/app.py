@@ -6,21 +6,12 @@ from dotenv import load_dotenv
 from google import genai
 from pypdf import PdfReader
 
-
-# =========================================================
-# CONFIGURATION
-# =========================================================
-
 st.set_page_config(
     page_title="AI Resume Critic",
     page_icon="📄",
     layout="wide"
 )
 
-
-# =========================================================
-# ENVIRONMENT
-# =========================================================
 
 load_dotenv()
 
@@ -52,9 +43,7 @@ if "chat_history" not in st.session_state:
     st.session_state.chat_history = []
 
 
-# =========================================================
-# HELPER FUNCTIONS
-# =========================================================
+
 
 def extract_pdf_text(pdf_file):
     """Extract text from an uploaded PDF file."""
@@ -82,7 +71,6 @@ def extract_score(text, label):
         72%
     """
 
-    # Look for X/100
     match = re.search(
         rf"{re.escape(label)}.*?(\d{{1,3}})\s*/\s*100",
         text,
@@ -92,7 +80,7 @@ def extract_score(text, label):
     if match:
         return int(match.group(1))
 
-    # Look for X%
+
     match = re.search(
         rf"{re.escape(label)}.*?(\d{{1,3}})\s*%",
         text,
@@ -309,7 +297,7 @@ The goal is to make the resume significantly better
 for THIS job. 
 ask whether he needed any fixes , if yes 
 
-# 🛠️ TOP 5 FIXES
+# 🛠️ TOP 3 FIXES
 
 Give the five highest-impact changes the candidate
 should make before applying to this specific job.
@@ -504,13 +492,9 @@ with st.sidebar:
         st.success("Job description loaded")
 
 
-# =========================================================
 # INPUT SECTION (resume + job description)
-# =========================================================
-# NOTE: this is a plain container, not st.form(), because the
-# Upload/Paste toggle needs to rerun the page immediately when
-# switched — st.form only reruns on submit, which would make the
-# toggle appear frozen.
+
+
 
 col1, col2 = st.columns(2)
 
@@ -559,7 +543,7 @@ with col1:
             except Exception as e:
                 st.error(f"❌ Failed to read PDF: {e}")
 
-    else:  # Paste Text
+    else:  
 
         pasted_resume = st.text_area(
             "Paste your resume text here",
@@ -652,9 +636,8 @@ if analyze_button:
                 )
 
 
-# =========================================================
+
 # DASHBOARD
-# =========================================================
 
 if st.session_state.analysis:
 
@@ -679,9 +662,7 @@ if st.session_state.analysis:
         "Estimated Skill Match"
     )
 
-    # -----------------------------------------------------
-    # KPI CARDS
-    # -----------------------------------------------------
+   
 
     col1, col2, col3, col4 = st.columns(4)
 
